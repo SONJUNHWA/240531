@@ -1,14 +1,13 @@
 class Beverage:
-    menu = {"커피": 3000, "녹차": 2500, "아이스티": 3000}
-
     def __init__(self, name, count):
+        self.menu = {"커피": 3000, "녹차": 2500, "아이스티": 3000}
         self.name = name
         self.count = count
         self.total = 0
 
     def sell(self):
-        if self.name in Beverage.menu:
-            self.total = Beverage.menu[self.name] * self.count
+        if self.name in self.menu:
+            self.total = self.menu[self.name] * self.count
         else:
             return "음료 이름이 잘못되었습니다. 다시 입력해 주세요."
 
